@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang='en-us'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>matilde</title>
+
+    <link rel='stylesheet' href='../style/reset.css' type='text/css' />
+    <link rel='stylesheet' href='../style/base.css' type='text/css' />
+    <link rel='stylesheet' href='../style/style.css' type='text/css' />
+    <style type='text/css'>
+        #index {
+            width: 350px;
+        }
+
+        #exhibit {
+            margin-left: 350px;
+            background-image: url('../file/prova2.png');
+            /* Replace with your image path */
+            background-size: cover;
+            /* This will cover the entire container */
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Prevent the image from repeating */
+            min-height: 100vh;
+            /* Ensures the container is at least the height of the viewport */
+            background-attachment: scroll;
+        }
+
+        #exhibit::before {
+            content: '';
+            /* Required for pseudo-element */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 110%;
+            background-color: rgba(255, 255, 255, 0.3);
+            /* White overlay with 50% opacity */
+            pointer-events: none;
+            /* Allows clicking through the overlay */
+            z-index: 0;
+            /* Keep the overlay behind other content */
+        }
+
+        #exhibit .container {
+            position: relative;
+            /* Keep content above the overlay */
+            z-index: 1;
+            /* Ensure content is above the overlay */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 27px;
+            padding-left: 27px;
+        }
+
+        #index,
+        #exhibit {
+            font-size: 14px;
+        }
+
+        #index,
+        #exhibit {
+            line-height: 16px;
+        }
+
+        .container {
+            padding-top: 27px;
+        }
+
+        .container {
+            padding-left: 27px;
+        }
+
+       
+
+        #index,
+        #exhibit {
+            color: #000000;
+        }
+
+        #index,
+        #exhibit {
+            font-family: DejaVu;
+        }
+
+        #index ul.section span.section_title,
+        #index ul.section span.section_title a,
+        #index ul.section span.subsection_title,
+        #index ul.section span.subsection_title a {
+            font-size: 15px;
+        }
+
+        #exhibit .container {
+            display: flex;
+            /* Enable flexbox */
+            flex-direction: column;
+            /* Arrange children in a column */
+            align-items: center;
+            /* Center items horizontally */
+            justify-content: center;
+            /* Center items vertically if needed */
+            padding-top: 27px;
+            /* Keep your existing padding */
+            padding-left: 27px;
+            /* Keep your existing padding */
+        }
+
+        video {
+            display: block;
+            /* Ensures it respects margin auto */
+            margin: 20px auto;
+            /* Center horizontally */
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    </style>
+
+
+
+</head>
+
+<body class='exhibits section-1 exhibit-1 format-visual_index'>
+    <div id='index' style=" width: 350px;display: flex; flex-direction: column;">
+
+        <div class='container'>
+
+            <div class='top'>
+                <p></p>
+                <div class='top' style="margin-bottom: 20px;">
+
+                    <div class="image-container">
+                        <img src="../file/matilde.png" alt="matilde" class="normal-image">
+                        <img src="../file/matildepix.png" alt="matilde on hover" class="hover-image">
+                    </div>
+
+
+                </div>
+            </div>
+            <ul class='section active_section' id='section_1'>
+                <li>
+                    <span id='section_title_1' class='section_title active_section_title'>
+                        <a href='../index.html' id='section_link_1'>
+                            <span class="text-original">Matilde Sartori</span>
+                            <span class="text-hover">About Me</span>
+                        </a>
+                    </span>
+                </li>
+            </ul>
+            <ul class='section' id='section_30' style="padding-left: 10px; padding-top: 10px;">
+                <p style="font-weight: bold;">>>> code </p>
+                <ul>
+                    <li class='exhibit_title'><a href='cosmoscape.html'>Cosmoscape! (NASA SpaceaApp Challenge) <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='boom.html'>boom - a poem <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='slime.html'>slime machine <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='skeptic.html'>skeptic reader (Domestic Data
+                            Streamers) <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='hand.html'>hand <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='tabtsb.html'>tabtsb - the mailing list <small>[2024]</small></a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='time.html'>the order of time <small>[2023]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='cover.html'>cover album generation <small>[2023]</small></a></li>
+                </ul>
+                <p style="font-weight: bold;">>>> pseudo-code</p>
+                <ul>
+                    <li class='exhibit_title'><a href='wc.html'>wc notebook <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='sciarpa.html'>a scarf for Maria Puig de la
+                            Bellacasa <small>[2023]</small></a></li>
+                </ul>
+
+                </li>
+            </ul>
+
+            <div class='bot'></div>
+
+
+        </div>
+        <button class="button" role="button">destroy</button>
+        <audio id="clickSound" src="../file/click.mp3" preload="auto"></audio>
+    </div>
+
+    <div id='exhibit'>
+        <div class='container'>
+
+            <p style="font-weight: bold; font-size: 25px; width: 90%;">slime machine</p>
+            <p style="font-style: oblique; font-size: 12px; width:90%">[python]</p>
+            <p style="font-style: oblique; text-align: right; width: 90%; margin-bottom: 30px;"> with the hope that all
+                machines will slime</p>
+            <p style="width: 90%;">This is my final thesis for the Design Research Master Degree I followed at BAU advised by Timothy Justin Cowlishaw.</p>
+            <p style="width:90%"> This thesis explores the concept of intelligence, the view of machines and their
+                relationship in a more than human way. <br />
+                The focus of my research is slime mould, and in particular the Physarum Polycephalum species, a
+                non-binary, decentralized, random organism used as a model for thinking about and then developing a new
+                form of computing.<br />
+                I begin by rethinking intelligence, challenging the brain-centric view that has dominated our society
+                and trying to understand it in all its forms, trying to remove the anthropocentric lens and analyze it
+                in its more-than-human forms. Then, I examine how machines can be reimagined, designing new
+                relationships and better ways to coexist with non-human entities, following an ecology of
+                technology.<br />
+                The research includes the development of a computer vision algorithm inspired by the behavior of slime
+                moulds, with a focus on edge detection. This algorithm, aaardm.py, starts from randomness and searches
+                for solutions rather than predicting them, providing a philosophical and practical framework for a more
+                ecological and inclusive form of computing.<br />
+                Through this research I wanted to demonstrate that there are other ways of doing technology, that
+                integrate with the more-than-human world in an harmoniously way, keeping nature at the center of the
+                process and that the conception of a new form of computing is not only material in nature, but refers
+                back to a new way of thinking.<br />
+            </p>
+            <video width="320" controls>
+                <source src="../file/final.mp4" type="video/mp4">
+                Your browser does not support the video D:
+            </video>
+
+            <!-- <div style="padding:100% 0 0 0;position:relative;">
+                <iframe src="https://player.vimeo.com/video/1006666498?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="pacman"></iframe>
+            </div> -->
+            <script src="https://player.vimeo.com/api/player.js"></script>
+            <p style="width: 90%;"><a href="https://www.socbau.net/tfg/tfm/slime-machine/">pdf</a></p>
+            <p style="width: 90%;"><a href="https://github.com/matildee3/slime-machine" >sourcecode</a><br /></p>
+
+
+
+
+        </div>
+    </div>
+
+
+</body>
+<script src="../js/destroy.js"></script>
+</html>

@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang='en-us'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>matilde</title>
+
+    <link rel='stylesheet' href='../style/reset.css' type='text/css' />
+    <link rel='stylesheet' href='../style/base.css' type='text/css' />
+    <link rel='stylesheet' href='../style/style.css' type='text/css' />
+    <style type='text/css'>
+        #index {
+            width: 350px;
+        }
+
+        #exhibit {
+            margin-left: 350px;
+        }
+
+        #index,
+        #exhibit {
+            font-size: 14px;
+            line-height: 16px;
+            color: #000000;
+            font-family: DejaVu;
+        }
+
+        .container {
+            padding-top: 27px;
+            padding-left: 27px;
+        }
+
+
+        #index ul.section span.section_title,
+        #index ul.section span.section_title a,
+        #index ul.section span.subsection_title,
+        #index ul.section span.subsection_title a {
+            font-size: 15px;
+        }
+
+
+        .skeptic-container {
+            position: relative;
+            width: 650px;
+            margin: 25px auto 25px auto;
+            overflow: hidden;
+        }
+
+        .skeptic {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .skeptic img {
+            width: 100%;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            z-index: 10;
+            width: 7%;
+
+        }
+
+        #prev {
+            left: 0;
+        }
+
+        #next {
+            right: 0;
+        }
+    </style>
+
+</head>
+
+<body class='exhibits section-1 exhibit-1 format-visual_index'>
+    <div id='index' style=" width: 350px;display: flex; flex-direction: column;">
+
+        <div class='container'>
+
+            <div class='top'>
+                <p></p>
+                <div class='top' style="margin-bottom: 20px;">
+
+                    <div class="image-container">
+                        <img src="../file/matilde.png" alt="matilde" class="normal-image">
+                        <img src="../file/matildepix.png" alt="matilde on hover" class="hover-image">
+                    </div>
+
+
+                </div>
+            </div>
+            <ul class='section active_section' id='section_1'>
+                <li>
+                    <span id='section_title_1' class='section_title active_section_title'>
+                        <a href='../index.html' id='section_link_1'>
+                            <span class="text-original">Matilde Sartori</span>
+                            <span class="text-hover">About Me</span>
+                        </a>
+                    </span>
+                </li>
+            </ul>
+            <ul class='section' id='section_30' style="padding-left: 10px; padding-top: 10px;">
+                <p style="font-weight: bold;">>>> code </p>
+                <ul>
+                    <li class='exhibit_title'><a href='cosmoscape.html'>Cosmoscape! (NASA SpaceaApp Challenge)
+                            <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='boom.html'>boom - a poem <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='slime.html'>slime machine <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='skeptic.html'>skeptic reader (Domestic Data
+                            Streamers) <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='hand.html'>hand <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='tabtsb.html'>tabtsb - the mailing list <small>[2024]</small></a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='time.html'>the order of time <small>[2023]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='cover.html'>cover album generation <small>[2023]</small></a></li>
+                </ul>
+                <p style="font-weight: bold;">>>> pseudo-code</p>
+                <ul>
+                    <li class='exhibit_title'><a href='wc.html'>wc notebook <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='sciarpa.html'>a scarf for Maria Puig de la
+                            Bellacasa <small>[2023]</small></a></li>
+                </ul>
+
+                </li>
+            </ul>
+
+            <div class='bot'></div>
+
+
+        </div>
+        <button class="button" role="button">destroy</button>
+        <audio id="clickSound" src="../file/click.mp3" preload="auto"></audio>
+    </div>
+
+
+    <div id='exhibit'>
+        <div class='container'>
+            <p style="font-weight: bold; font-size: 25px; width: 90%;">skeptic reader</p>
+            <p style="font-style: oblique; font-size: 12px; width:90%">[js,html,css]</p>
+
+            <p style="width: 95%;">Skeptic Reader is a Chrome plugin I implemented for Domestic Data Streamers that
+                acts as your
+                personal bullshit🤌 detector for the internet.</p>
+            <div class="skeptic-container">
+                <button id="prev" class="nav-btn" style="margin-left: 0px;">←</button>
+                <div class="skeptic">
+                    <img src="../file/skeptic1.jpeg" alt="image 1">
+                    <img src="../file/skeptic2.jpeg" alt="image 2">
+                    <img src="../file/skeptic3.jpeg" alt="image 3">
+                    <img src="../file/skeptic4.jpeg" alt="image 4">
+                </div>
+                <button id="next" class="nav-btn">→</button>
+            </div>
+
+            <p style="width: 95%;"> You can <a href="https://www.skepticreader.domesticstreamers.com/">check it out</a>,
+                <a
+                    href="https://chromewebstore.google.com/detail/skepticreader/hkgemkcnhndcflphekcjlhclghjncgoc?hl=en-GB&authuser=0&pli=1">download
+                    it</a>, and even explore the <a
+                    href="https://github.com/ddsdevelopers/SkepticReader">sourcecode</a>!
+            </p>
+
+            <br>
+            <p style="width: 95%;"><a
+                    href="https://domesticdatastreamers.medium.com/bullshit-detectors-the-fight-for-real-news-in-an-artificial-future-3a08fa6a1512">Bullshit
+                    detectors: the fight for real news in an artificial future</a></p>
+            <p style="width: 95%;">Skeptic Reader was featured as an example of dissident use of GEN-AI in <a
+                    href="https://xnet-x.net/en/fakeyou-disinformation-free-download/">Simona Levi's latest
+                    book</a>.</p>
+        </div>
+    </div>
+</body>
+<script>
+    const skepticContainer = document.querySelector('.skeptic');
+    const images = document.querySelectorAll('.skeptic img');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+
+    let currentIndex = 0;
+
+    // Function to display the current image based on the index
+    function showImage(index) {
+        const imageWidth = skepticContainer.offsetWidth;
+        skepticContainer.style.transform = `translateX(-${index * imageWidth}px)`;
+    }
+
+    // Click event for the left arrow (previous button)
+    prevBtn.addEventListener('click', () => {
+        currentIndex--;
+        if (currentIndex < 0) {
+            // Wrap around to the last image
+            currentIndex = images.length - 1;
+        }
+        showImage(currentIndex);
+    });
+
+    // Click event for the right arrow (next button)
+    nextBtn.addEventListener('click', () => {
+        currentIndex++;
+        if (currentIndex >= images.length) {
+            // Wrap around to the first image
+            currentIndex = 0;
+        }
+        showImage(currentIndex);
+    });
+
+    // Handle resizing to adjust for image width changes (optional but useful for responsiveness)
+    window.addEventListener('resize', () => {
+        showImage(currentIndex);
+    });
+
+
+</script>
+
+<script src="../js/destroy.js"></script>
+
+</html>

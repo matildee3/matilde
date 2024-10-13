@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang='en-us'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Matilde</title>
+
+    <link rel='stylesheet' href='../style/reset.css' type='text/css' />
+    <link rel='stylesheet' href='../style/base.css' type='text/css' />
+    <link rel='stylesheet' href='../style/style.css' type='text/css' />
+    <style type='text/css'>
+        #index {
+            width: 350px;
+        }
+
+        #exhibit {
+            margin-left: 350px;
+
+        }
+
+        #index,
+        #exhibit {
+            font-size: 14px;
+        }
+
+
+        #index,
+        #exhibit {
+            line-height: 16px;
+        }
+
+        .container {
+            padding-top: 27px;
+            padding-left: 27px;
+        }
+
+    
+
+        #index,
+        #exhibit {
+            color: #000000;
+        }
+
+        #index,
+        #exhibit {
+            font-family: DejaVu;
+        }
+
+        /* Layout for the exhibit section */
+        #exhibit .container {
+            display: flex;
+            /* Enables flexbox layout */
+            justify-content: space-between;
+            /* Space between elements */
+            align-items: flex-start;
+            /* Align items at the top */
+            padding: 0;
+            /* Remove padding to let elements fill the space */
+        }
+
+        #exhibit .container img {
+            width: 40%;
+            /* Set the image width */
+            height: auto;
+            /* Keep the image aspect ratio */
+            object-fit: cover;
+            /* Cover the container space */
+        }
+
+        .text-content {
+            width: 55%;
+            /* Set the width of the text container */
+            padding-left: 20px;
+            /* Add space between image and text */
+            font-family: monospace;
+            color: #000;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .text-content h1,
+        .text-content h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .text-content h1 {
+            font-size: 24px;
+        }
+
+        .text-content h2 {
+
+            margin-top: 10px;
+        }
+
+        .text-content p {
+            margin: 10px 0;
+        }
+
+        .text-content .highlight {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .text-content ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+
+
+
+
+    </style>
+</head>
+
+<body class='exhibits section-1 exhibit-1 format-visual_index'>
+    <div id='index' style=" width: 350px;display: flex; flex-direction: column;">
+
+        <div class='container'>
+
+            <div class='top'>
+                <p></p>
+                <div class='top' style="margin-bottom: 20px;">
+
+                    <div class="image-container">
+                        <img src="../file/matilde.png" alt="matilde" class="normal-image">
+                        <img src="../file/matildepix.png" alt="matilde on hover" class="hover-image">
+                    </div>
+
+
+                </div>
+            </div>
+            <ul class='section active_section' id='section_1'>
+                <li>
+                    <span id='section_title_1' class='section_title active_section_title'>
+                        <a href='../index.html' id='section_link_1'>
+                            <span class="text-original">Matilde Sartori</span>
+                            <span class="text-hover">About Me</span>
+                        </a>
+                    </span>
+                </li>
+            </ul>
+            <ul class='section' id='section_30' style="padding-left: 10px; padding-top: 10px;">
+                <p style="font-weight: bold;">>>> code </p>
+                <ul>
+                    <li class='exhibit_title'><a href='cosmoscape.html'>Cosmoscape! (NASA SpaceaApp Challenge) <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='boom.html'>boom - a poem <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='slime.html'>slime machine <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='skeptic.html'>skeptic reader (Domestic Data
+                            Streamers) <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='hand.html'>hand <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='tabtsb.html'>tabtsb - the mailing list <small>[2024]</small></a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='time.html'>the order of time <small>[2023]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='cover.html'>cover album generation <small>[2023]</small></a></li>
+                </ul>
+                <p style="font-weight: bold;">>>> pseudo-code</p>
+                <ul>
+                    <li class='exhibit_title'><a href='wc.html'>wc notebook <small>[2024]</small></a></li>
+                </ul>
+                <ul>
+                    <li class='exhibit_title'><a href='sciarpa.html'>a scarf for Maria Puig de la
+                            Bellacasa <small>[2023]</small></a></li>
+                </ul>
+
+                </li>
+            </ul>
+
+            <div class='bot'></div>
+
+
+        </div>
+        <button class="button" role="button">destroy</button>
+        <audio id="clickSound" src="../file/click.mp3" preload="auto"></audio>
+    </div>
+
+
+    <div id='exhibit'>
+        <div class='container'>
+            <img src="../file/sciarpa.png" alt="Scarf Image"
+                style=" width: 496px; height: 5565px;  object-fit: cover; flex-shrink: 0;">
+            <div class="text-content">
+                <p style="font-size: 50px; margin-top: 70px;">MATTERS OF CARE</p>
+                </br>
+                <p style="font-size: 20px; margin-top: 30px;">speculative ethics in more than human worlds</p>
+                <p style="font-style: oblique; margin-left: 50%;">Maria Puig de la Bellacasa</p>
+                <p style="margin-top: 200px;">a mind map of the introductory chapter</p>
+                <p style="margin-top: 400px;">omnipresent, even through the effects of its absence </p>
+                <p style="margin-top: 230px;">for thinking and living in more than human worlds</p>
+                <p style="margin-top: 220px;">everything that we do to maintain, continue and repair “our world” so that
+                    we can live in it as well
+                    as possible</p>
+                <ul>
+                    <li> - caring about</li>
+                    <li> - taking care of</li>
+                    <li> - care giving</li>
+                    <li> - care receiving</li>
+                </ul>
+                <p style="margin-top: 200px;">care as a vital in interweaving a web of life</p>
+                <p style="margin-top: 700px;">care is not about fusion. <br>
+                    it can be about the right distance.</p>
+                <p>it doesn’t mean that to care should be a moral obligation in all situations - practices - or
+                    decisions.</p>
+
+
+
+                <p style="margin-top: 860px;">care as intrinsically involving<br>-> ethical<br>->
+                    political<br>intervention</p>
+                <ul>
+                    <li>objectionable</li>
+                    <li>speculative</li>
+                </ul>
+                <p style="font-weight: bold; font-size: large; text-align: center;">“WHY SHOULD I CARE ABOUT CARE?”</p>
+                <ul>
+                    <li>RE - articulation</li>
+                    <li>RE - conception</li>
+                    <li>RE - enactment</li>
+                </ul>
+                <br>
+                <p style="text-align: center; font-size: large;">RECLAIMING <br>CARE</p>
+                <p style="margin-top: 250px; font-size: large; font-weight: bold; text-align: center;">I RESIST
+                    CATEGORIZING CARE</p>
+                <p style="margin-top: 200px; font-size: large; text-decoration: underline; text-align: center;">-----
+                    DISPLACING CARE ----- </p>
+
+                <p style="text-align: center;">cultural - political - ethical challenges</p>
+                <p style="text-decoration: underline; font-size: 15px;">PART I knowledge politics</p>
+                <p>expanding the ethico-political meaning of care<br>-> preoccupation with knowledge politics in
+                    technosciences</p>
+                <p style="font-style: oblique; margin-left: 20px;"> cap 1 assembling neglected “things”</p>
+                <p style="margin-left: 40px;"> materiality in more than human thing</p>
+                <p style="font-style: oblique; margin-left: 20px;"> cap 2 thinking with care</p>
+                <p style="margin-left: 40px;"> mattering of worlds</p>
+                <p style="font-style: oblique; margin-left: 20px;"> cap 3 touching vision</p>
+                <p style="margin-left: 40px;"> being touched by what we touch<br> -> RECIPROCITY ( -> rarely bilateral
+                    )<br>
+                    -> collective disseminated force</p>
+                <p style="text-decoration: underline; font-size: 15px; margin-top: 80px;">PART II speculative ethics in
+                    antiecological times</p>
+                <p>nature cultures<br>“what does it mean to think of agencies of care in more than human terms?”</p>
+                <p style="font-style: oblique; margin-left: 20px;">cap 4 alterbiopolitics</p>
+                <p style="margin-left: 40px;">mattering of worlds on ethics of collective empowerment that puts caring
+                    at
+                    the heart of the search of everyday struggles for hopeful flourishing of all beings, of bios
+                    understood as a more than human community</p>
+                <p style="font-style: oblique; margin-left: 20px;">cap 3 soil times</p>
+                <p style="margin-left: 40px;">blue jeans yarn (WOOL AND THE GANG)<br>washed out denim<br>100gr +/- 148yd
+                    /
+                    135 cm<br>20% upcycled denim<br>80% upcycled cotton</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/destroy.js"></script>
+</html>
