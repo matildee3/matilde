@@ -87,23 +87,18 @@
 
         .image-container-wrapper {
             display: flex;
-            flex-wrap: wrap;
             gap: 20px;
-            /* Adjusts space between the images */
-            max-width: 960px;
-            /* Adjust width as needed */
+            justify-content: flex-start;
+            margin-bottom: 20px;
         }
 
         .image-container-wrapper img {
-            flex: 1 1 calc(33.33% - 20px);
-            /* 33.33% width with space accounted for */
             width: 300px;
-            /* Adjust width as needed */
             height: auto;
-            /* Keeps aspect ratio */
             object-fit: contain;
-            /* Keeps image within bounds */
+            flex: none;
         }
+
     </style>
 
 
@@ -140,7 +135,8 @@
             <ul class='section' id='section_30' style="padding-left: 10px; padding-top: 10px;">
                 <p style="font-weight: bold;">>>> code </p>
                 <ul>
-                    <li class='exhibit_title'><a href='cosmoscape.html'>Cosmoscape! (NASA SpaceaApp Challenge) <small>[2024]</small></a></li>
+                    <li class='exhibit_title'><a href='cosmoscape.html'>cosmoscape! (NASA SpaceaApp Challenge)
+                            <small>[2024]</small></a></li>
                 </ul>
                 <ul>
                     <li class='exhibit_title'><a href='boom.html'>boom - a poem <small>[2024]</small></a></li>
@@ -165,7 +161,7 @@
                 <ul>
                     <li class='exhibit_title'><a href='cover.html'>cover album generation <small>[2023]</small></a></li>
                 </ul>
-                <p style="font-weight: bold;">>>> pseudo-code</p>
+                <p style="font-weight: bold; padding-top: 10px;">>>> pseudo-code</p>
                 <ul>
                     <li class='exhibit_title'><a href='wc.html'>wc notebook <small>[2024]</small></a></li>
                 </ul>
@@ -190,7 +186,7 @@
         <div class='container' style="width: 100%;">
 
             <p style="font-weight: bold; font-size: 25px; width: 90%;">wc notebook</p> <br>
-            <p>my notes from the digital design course, taught by Professor Lluís Nacenta, taken in my master's degree
+            <p>My notes from the digital design course, taught by Professor Lluís Nacenta, taken in my master's degree
                 at BAU</p>
             <p>BAU bathrooms, second floor, Granada building, Barcelona</p> <br>
             <div style="margin-left: 25px; width: 100%; font-size: 13px;">
@@ -248,7 +244,11 @@
 
                 </div>
                 <p>}</p>
-                <p>///////////////////////////////////////////////////////////////</p>
+                <div class="image-container-wrapper" style="margin-left: 0; align-items: flex-start;">
+                    <img src="../file/IMG_1.png" alt="Image 1">
+                    <img src="../file/IMG_9.png" alt="Image 9">
+                </div>
+                <!-- <p>///////////////////////////////////////////////////////////////</p> -->
             </div>
             <div style="margin-left: 25px; width: 100%; font-size: 13px;">
                 <p>Ses1: Feedback loop & hacking { </p>
@@ -291,7 +291,11 @@
 
                 </div>
                 <p>}</p>
-                <p>///////////////////////////////////////////////////////////////</p>
+                <div class="image-container-wrapper" style="margin-left: 0; align-items: flex-start;">
+                    <img src="../file/IMG_2.png" alt="Image 2">
+                    <img src="../file/IMG_3.png" alt="Image 3">
+                </div>
+                <!-- <p>///////////////////////////////////////////////////////////////</p> -->
             </div>
             <div style="margin-left: 25px; width: 100%; font-size: 13px;">
                 <p>Ses2: code aesthetics { </p>
@@ -308,7 +312,11 @@
 
                 </div>
                 <p>}</p>
-                <p>///////////////////////////////////////////////////////////////</p>
+                <div class="image-container-wrapper" style="margin-left: 0; align-items: flex-start;">
+                    <img src="../file/IMG_8.png" alt="Image 8">
+                    <img src="../file/IMG_7.png" alt="Image 7">
+                </div>
+                <!-- <p>///////////////////////////////////////////////////////////////</p> -->
             </div>
 
             <div style="margin-left: 25px; width: 100%; font-size: 13px;">
@@ -358,15 +366,10 @@
                 <p>}</p>
             </div>
             <div class="image-container-wrapper" style="margin-left: 0; align-items: flex-start;">
-                <img src="../file/IMG_1.png" alt="Image 1">
-                <img src="../file/IMG_2.png" alt="Image 2">
-                <img src="../file/IMG_3.png" alt="Image 3">
                 <img src="../file/IMG_4.png" alt="Image 4">
                 <img src="../file/IMG_5.png" alt="Image 5">
                 <img src="../file/IMG_6.png" alt="Image 6">
-                <img src="../file/IMG_7.png" alt="Image 7">
-                <img src="../file/IMG_8.png" alt="Image 8">
-                <img src="../file/IMG_9.png" alt="Image 9">
+
             </div>
 
 
@@ -379,4 +382,5 @@
 
 </body>
 <script src="../js/destroy.js"></script>
+
 </html>
