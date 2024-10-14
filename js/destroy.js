@@ -4,24 +4,25 @@ const clickSound = document.getElementById('clickSound'); // Select the audio el
 
 // Function to wrap text nodes into individual letters and select other elements
 function wrapElements(element) {
-    element.childNodes.forEach((node) => {
-        if (node.nodeType === Node.TEXT_NODE) {
-            // Split text into individual letters wrapped in spans
-            const text = node.textContent.trim();
-            if (text.length > 0) {
-                const wrappedText = [...text]
-                    .map((letter) => `<span class="letter">${letter}</span>`)
-                    .join('');
-                const wrapper = document.createElement('span');
-                wrapper.innerHTML = wrappedText;
-                node.replaceWith(wrapper);
-            }
-        } else if (node.nodeType === Node.ELEMENT_NODE) {
-            // For other elements, wrap the element itself
-            node.classList.add('falling-element'); // Add class to handle falling effect
-            wrapElements(node); // Recursively wrap child nodes
+    if (element.nodeType === Node.TEXT_NODE) {
+        // Split text into individual letters wrapped in spans
+        const text = element.textContent.trim();
+        if (text.length > 0) {
+            const wrappedText = [...text]
+                .map((letter) => `<span class="letter">${letter}</span>`)
+                .join('');
+            const wrapper = document.createElement('span');
+            wrapper.innerHTML = wrappedText;
+            element.replaceWith(wrapper);
         }
-    });
+    } else if (element.nodeType === Node.ELEMENT_NODE) {
+        // For div elements, add the falling-element class
+        if (element.tagName.toLowerCase() === 'div') {
+            element.classList.add('falling-element');
+        }
+        // Recursively wrap child nodes
+        Array.from(element.childNodes).forEach(wrapElements);
+    }
 }
 
 // New function: Trembling and falling animation for elements
@@ -33,7 +34,7 @@ function startTremblingAndFalling() {
     const elementsToWrap = document.querySelectorAll('#index, #exhibit, .container, p, li, a, img, div');
     elementsToWrap.forEach(wrapElements);
 
-    const fallingItems = document.querySelectorAll('.letter, .falling-element');
+    const fallingItems = document.querySelectorAll('.letter, .falling-element, div');
 
     fallingItems.forEach((item) => {
         // Trembling phase

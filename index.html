@@ -135,7 +135,7 @@
 
     </div>
 
-    <div id='exhibit' style=" overflow-x: hidden; display: flex; flex-direction: column;">
+    <div id='exhibit' style="overflow-x: hidden; display: flex; flex-direction: column; padding-bottom: 50px;">
         <div class='container'>
 
             <div class='top'><!-- --></div>
@@ -163,9 +163,10 @@
             </p>
 
             <p>Cheers, <br />
-                Matilde
-        <div class="game" style="position: relative; width: 100%; top: 90% ; ">
-            <img id="pac" src="file/pac.png" alt="pac" style="width: 40px;">
+                Matilde</p>
+                <div class="game" style="position: absolute; width: calc(100% - 350px); bottom: 0; left: 350px; height: 100%;">
+            <img id="pac" src="file/dino.png" alt="pac" style="width: 40px; height: 40px; position: absolute; transition: transform 0.1s, width 0.3s, height 0.3s; bottom: 0;">
+            <img id="mush" src="file/mush.png" alt="mushroom" style="width: 30px; height: 30px; position: absolute; bottom: 0;">
         </div>
 
         </div>
@@ -178,29 +179,71 @@
 </body>
 <script src="js/destroy.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const pac = document.getElementById('pac');
-        const gameContainer = document.querySelector('.game');
-        const step = 10; // Number of pixels to move per key press
-        let position = 0;
+document.addEventListener('DOMContentLoaded', function () {
+    const pac = document.getElementById('pac');
+    const mush = document.getElementById('mush');
+    const gameContainer = document.querySelector('.game');
+    const step = 10; // Number of pixels to move per key press
+    let pacSize = 40; // Initial size of Pac-Man
+    
+    function updateMaxPosition() {
+        return gameContainer.clientWidth - pacSize;
+    }
+    
+    function getRandomPosition() {
+        return Math.floor(Math.random() * (updateMaxPosition() - 30)); // 30 is mush width
+    }
+    
+    // Set initial positions randomly
+    let pacPosition = getRandomPosition();
+    let mushPosition = getRandomPosition();
+    pac.style.left = pacPosition + 'px';
+    mush.style.left = mushPosition + 'px';
 
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'ArrowRight') {
-                // Move to the right
-                if (position + step < gameContainer.clientWidth - pac.clientWidth) {
-                    position += step;
-                    pac.style.left = position + 'px';
-                }
-            } else if (event.key === 'ArrowLeft') {
-                // Move to the left
-                if (position - step >= 0) {
-                    position -= step;
-                    pac.style.left = position + 'px';
-                }
+    function checkCollision() {
+        const pacRect = pac.getBoundingClientRect();
+        const mushRect = mush.getBoundingClientRect();
+        if (pacRect.left < mushRect.right &&
+            pacRect.right > mushRect.left &&
+            pacRect.top < mushRect.bottom &&
+            pacRect.bottom > mushRect.top) {
+            // Collision detected, move mushroom and grow Pac-Man
+            mushPosition = getRandomPosition();
+            mush.style.left = mushPosition + 'px';
+            
+            // Grow Pac-Man
+            pacSize += 5;
+            pac.style.width = pacSize + 'px';
+            pac.style.height = pacSize + 'px';
+            
+            // Adjust Pac-Man's position if it's now out of bounds
+            if (pacPosition + pacSize > gameContainer.clientWidth) {
+                pacPosition = gameContainer.clientWidth - pacSize;
+                pac.style.left = pacPosition + 'px';
             }
-        });
-    });
+        }
+    }
 
+    document.addEventListener('keydown', function (event) {
+        const maxPosition = updateMaxPosition();
+        if (event.key === 'ArrowRight') {
+            // Move to the right
+            if (pacPosition + step < maxPosition) {
+                pacPosition += step;
+                pac.style.left = pacPosition + 'px';
+                pac.style.transform = 'scaleX(1)'; // Face right
+            }
+        } else if (event.key === 'ArrowLeft') {
+            // Move to the left
+            if (pacPosition - step >= 0) {
+                pacPosition -= step;
+                pac.style.left = pacPosition + 'px';
+                pac.style.transform = 'scaleX(-1)'; // Face left
+            }
+        }
+        checkCollision();
+    });
+});
 </script>
 
 

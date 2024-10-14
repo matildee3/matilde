@@ -53,6 +53,19 @@
         #index ul.section span.subsection_title a {
             font-size: 15px;
         }
+        .image-container-wrapper {
+            display: flex;
+            /* gap: 20px; */
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .image-container-wrapper img {
+            width: 50%;
+            height: auto;
+            object-fit: contain;
+            flex: none;
+        }
 
         
 
@@ -154,7 +167,11 @@
                 <p style="width: 90%;">This project led us to discover new ways to connect audio to images using AI. It was fascinating to see how the AI captured the essence of the music and transformed it into matching visuals.</p>
                    <p style="width: 90%; margin-top: 15px;"> Here are some of the outputs:
                 </p>
-                <img src="../file/cover.png" alt="cover" style="width: 400px;">
+                <!-- <img src="../file/cover.png" alt="cover" style="width: 400px;"> -->
+                <div class="image-container-wrapper" style="margin-left: 0; align-items: flex-start; width: 90%;">
+                    <img src="../file/cover1.png" alt="cover 1">
+                    <img src="../file/cover2.png" alt="cover 2">
+                </div>
                 <p style="width: 90%; margin-top: 20px;"><a href="https://github.com/DavidSolan0/cover-art-generation">sourcecode</a><br /></p>
             </div>
     </div>
