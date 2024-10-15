@@ -18,7 +18,9 @@
         #exhibit {
             margin-left: 350px;
         }
-
+        a {
+            pointer-events: auto !important;
+}
         #index,
         #exhibit {
             font-size: 14px;
@@ -145,7 +147,7 @@
             <p>technologist - researcher - designer</p>
             <p>Bachelor in Statistics. Postgraduate Diploma in AI with Deep Learning. Official Master Degree in Design
                 Research.</p>
-            <a href="https://drive.google.com/file/d/1-u-uuy1qtfDW9vpaGoqo0GhI3W1B6z_C/view?usp=sharing"><u>CV</u></a>
+            <p><a href="https://drive.google.com/file/d/1-u-uuy1qtfDW9vpaGoqo0GhI3W1B6z_C/view?usp=sharing" ><u>CV</u></a></p>
             <div style="width: 100%; margin-top: 10px;">
                 <marquee behaviour="scroll" direction="left" style="box-sizing: border-box; margin: 0; padding: 0;">
                     reader, data analyst, computer user, latrinalia artist, italian, explorer, cat mom, visitor, slime
@@ -157,9 +159,9 @@
             </p>
 
             <p> matilde.sartori3@gmail.com<br>
-                <a href="https://github.com/matildee3">github</a><br />
-                <a href="https://www.instagram.com/matildesartori/">instagram</a><br />
-                <a href="https://www.linkedin.com/in/matilde-sartori-2786111aa/">linkedin</a>
+            <a href="https://github.com/matildee3" onclick="event.stopPropagation(); event.preventDefault(); window.open(this.href, '_blank'); return false;">github</a><br />
+            <a href="https://www.instagram.com/matildesartori/" onclick="event.stopPropagation(); event.preventDefault(); window.open(this.href, '_blank'); return false;">instagram</a><br />
+            <a href="https://www.linkedin.com/in/matilde-sartori-2786111aa/" onclick="event.stopPropagation(); event.preventDefault(); window.open(this.href, '_blank'); return false;">linkedin</a>
             </p>
 
             <p>Cheers, <br />
@@ -225,6 +227,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     document.addEventListener('keydown', function (event) {
+        // Allow default behavior for Tab and Enter keys
+        if (event.key === 'Tab' || event.key === 'Enter') {
+            return;
+        }
+
+        // Prevent default behavior for arrow keys
+        if (event.key.startsWith('Arrow')) {
+            event.preventDefault();
+        }
+
         const maxPosition = updateMaxPosition();
         if (event.key === 'ArrowRight') {
             // Move to the right
@@ -245,7 +257,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
-
+<!-- <script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.body.addEventListener('click', function(event) {
+        console.log('Clicked element:', event.target);
+        console.log('Prevented default:', event.defaultPrevented);
+        if (event.target.tagName === 'A') {
+            console.log('Link clicked:', event.target.href);
+        }
+    }, true);
+});
+</script> -->
 
 </html>
 
@@ -283,3 +305,4 @@ document.addEventListener('DOMContentLoaded', function () {
                                    +++             +++                        +++                           
 matilde sartori 
 -->
+

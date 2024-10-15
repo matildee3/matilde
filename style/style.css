@@ -268,3 +268,11 @@ button {
   left: 0;        /* Align to the left */
   margin: 0;      /* Remove margin */
 }
+
+.game {
+  pointer-events: none; /* This allows clicks to pass through the game container */
+}
+
+.game img {
+  pointer-events: auto; /* But still allows interaction with the game elements like the Pac-Man image */
+}
