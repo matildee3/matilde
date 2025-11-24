@@ -1,11 +1,9 @@
 <!doctype html>
 <html lang='en-us'>
-<!-- the creation of this poprtflio was totally inspired by https://www.markfingerhut.com . i love your works. thank you -->
 
 <head>
     <meta charset='utf-8'>
     <title>matilde</title>
-
 
     <link rel='stylesheet' href='../style/reset.css' type='text/css' />
     <link rel='stylesheet' href='../style/base.css' type='text/css' />
@@ -38,6 +36,7 @@
         }
 
 
+
         #index,
         #exhibit {
             color: #000000;
@@ -46,24 +45,14 @@
 
 
 
+
+
+
         #index ul.section span.section_title,
         #index ul.section span.section_title a,
         #index ul.section span.subsection_title,
         #index ul.section span.subsection_title a {
             font-size: 15px;
-        }
-
-        .image-column {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        .image-column img {
-            height: auto;
-            margin-bottom: 20px;
-            /* Add space between images */
         }
     </style>
 
@@ -98,10 +87,12 @@
                     </span>
                 </li>
             </ul>
-            <ul class='section' id='section_30' style="padding-left: 10px; padding-top: 10px; height: 60%; overflow-y: auto;">
+            <ul class='section' id='section_30'
+                style="padding-left: 10px; padding-top: 10px; height: 60%; overflow-y: auto;">
                 <p style="font-weight: bold;">>>> code </p>
                 <ul>
-                    <li class='exhibit_title'><a href='ornythorhynchus.html'>📌 ornythorhynchus live somewhere <small>[2025]</small></a>
+                    <li class='exhibit_title'><a href='ornythorhynchus.html'>📌 ornythorhynchus live somewhere
+                            <small>[2025]</small></a>
                     </li>
                 </ul>
                 <ul>
@@ -120,10 +111,12 @@
                     <li class='exhibit_title'><a href='lava.html'>lavarand.py <small>[2024]</small></a></li>
                 </ul>
                 <ul>
-                    <li class='exhibit_title'><a href='cosmoscape.html'>cosmoscape! (NASA SpaceaApp Challenge) <small>[2024]</small></a></li>
+                    <li class='exhibit_title'><a href='cosmoscape.html'>cosmoscape! (NASA SpaceaApp Challenge)
+                            <small>[2024]</small></a></li>
                 </ul>
                 <ul>
-                    <li class='exhibit_title'><a href='acab.html'>all changes are beautiful <small>[2024]</small></a></li>
+                    <li class='exhibit_title'><a href='acab.html'>all changes are beautiful <small>[2024]</small></a>
+                    </li>
                 </ul>
                 <ul>
                     <li class='exhibit_title'><a href='boom.html'>boom - a poem <small>[2024]</small></a></li>
@@ -163,40 +156,60 @@
 
     </div>
 
+
     <div id='exhibit'>
         <div class='container'>
-            <p style="font-weight: bold; font-size: 25px; width: 90%;">Cosmoscape!</p>
-            <p style="font-style: oblique; font-size: 12px; width:90%">[c++, blade, php, hack, C#, js...]</p>
-            <p style="width: 90%;">Exosky! project, NASA SpaceApp Challenge 2024, Barcelona. </p>
-            <p style="width:90%; margin-bottom: 20px;">For the NASA 2024 Hackathon, I collaborated with five others on a project called
-                Cosmoscape. <br>The idea behind Cosmoscape is to reimagine how the night sky would look from various
-                exoplanets. Using real astronomical data, we transformed star coordinates to show the sky from the
-                perspective of 50 different exoplanets.<br><br>
-                The interactive website we built allows users to explore these unique skies, create and name their own
-                constellations, and even vote for their favorites. To enhance the experience, users can download
-                exoplanet data or upload their own, adding new layers to the project. The goal of Cosmoscape is to make
-                astronomy more accessible and engaging, and to spark curiosity about space exploration among young
-                people.<br><br>
-                In this project, I was responsible for developing the 3D interactive maps of the night sky using
-                Three.js.<br></p>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/vZP7UXet8Ko?si=rRsQGthcqnSCdBUB"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="margin-bottom: 20px;"></iframe>
-            <p><a href="https://nasa24.netshiba.com/" style="margin-top: 20px;">website</a></p>
-            <p><a href="https://github.com/netraular/Hackathon-NASA-2024">sourcecode</a></p>
-            <div class="image-column">
-                <img src="../file/const1.png" alt="" style="width: 60%; margin-top: 20px;">
-                <img src="../file/const2.png" alt="" style="width: 60%;">
-                <img src="../file/const3.png" alt="" style="width: 60%;">
-                <img src="../file/const4.png" alt="" style="width: 60%;">
+            <p style="font-weight: bold; font-size: 25px; width: 90%;">Ornythorhynchus Live Somewhere</p>
+            <p style="font-style: oblique; font-size: 12px; width:90%">[python, max]</p>
+
+
+
+            <!-- mettere l'articolo su nero. video? immagini? descrizione.  -->
+
+
+            <p style="width: 90%;">Electroacoustic improvisation performance featuring Giancarlo Schiaffini (trombone),
+                Walter Prati (electronics), Gianmarco Canato (bassoon), and Matilde Sartori (software applications). The
+                concert, part of the ninth edition of Parade Électronique curated by <a
+                    href="https://www.mmt.it/">MMT</a>, took place at Teatro Arsenale on November 16, 2025, and
+                reinterprets the 1985 multimedia work in a contemporary key, exploring through sound the tensions
+                between rationality and absurdity, the organic and the artificial, ecological adaptation and
+                environmental crisis.</p>
+            <p style="width: 90%;">For this occasion, I developed an algorithm inspired by my <a href="slime.html">Slime
+                    Machine</a> project. It simulates platypus behavior to transform sounds in real time, managing a
+                population of “virtual platypuses” that move through a two-dimensional frequency space in search of
+                target frequencies, as if they were prey in a sonic environment. Walter Prati used this system during
+                the performance to control a granular synthesizer, creating an evolving dialogue between acoustic
+                instruments and electronic processing.</p>
+            <div class="gif-container">
+                <img src="../file/ornitorinco.gif" alt="ornitorinco gif">
             </div>
+            <div class="image-row-onitorinco">
+                <img src="../file/ornitorinco1.jpg" alt="">
+                <img src="../file/ornitorinco2.jpg" alt="">
+                <img src="../file/ornitorinco3.jpg" alt="">
+                <img src="../file/ornitorinco4.jpg" alt="">
+                <img src="../file/ornitorinco5.jpg" alt="">
+            </div>
+            <p style="width: 90%; margin-top: 30px;">PRESS: <a
+                    href="https://www.neroeditions.com/ornithorhynchus-live-somewhere/">Ornithorhynchus Live Somewhere -
+                    NERO editions</a>, <a
+                    href="https://www.djmagitalia.com/parade-electronique-musica-tecnologia-globalizzazione/">Parade
+                    Électronique: musica, tecnologia e globalizzazione - djmagitalia</a>, <a
+                    href="https://t-magazine.com/news/parade-electronique-2025-nova-tempora-omnes-mundo-nelle-immaginazioni-piu-profonde-dellelettronica/">Parade
+                    Électronique 2025 — Nova Tempora / Omnes Mundo: nelle immaginazioni più profonde dell’elettronica -
+                    t-mag</a>, <a
+                    href="https://www.raiplaysound.it/audio/2025/10/Radio3-Suite---Magazine-del-29102025-32a9943f-1d56-4a0d-a45a-707fa764e98f.html">Radio3
+                    Suite - Magazine
+                    Convegno "L'intelligenza del contrabbasso... e del fagotto" al Teatro Arsenale di Milano</a></p>
+
         </div>
     </div>
 
 
 </body>
 <script src="../js/destroy.js"></script>
+
+
 
 </html>

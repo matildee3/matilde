@@ -276,3 +276,25 @@ button {
 .game img {
   pointer-events: auto; /* But still allows interaction with the game elements like the Pac-Man image */
 }
+
+.gif-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.gif-container img {
+    width: 55%;   /* keep your original size */
+}
+
+.image-row-onitorinco {
+    display: flex;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 10px; /* spacing between images */
+}
+
+.image-row-onitorinco img {
+    width: 30%;  /* your original size */
+}
