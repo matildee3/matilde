@@ -35,7 +35,16 @@
             padding-left: 27px;
         }
 
-        
+        #exhibit .container1 {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 27px;
+            padding-left: 27px;
+        }
 
         #index,
         #exhibit {
@@ -43,42 +52,31 @@
             font-family: DejaVu;
         }
 
-        
-
-        
-
-
         #index ul.section span.section_title,
         #index ul.section span.section_title a,
         #index ul.section span.subsection_title,
         #index ul.section span.subsection_title a {
             font-size: 15px;
         }
-
-        
     </style>
-
-
 
 </head>
 
 <body class='exhibits section-1 exhibit-1 format-visual_index'>
-    <div id='index' style=" width: 350px;display: flex; flex-direction: column;">
+    <div id='index' style="width: 350px; display: flex; flex-direction: column;">
 
         <div class='container' style="height: 85%">
 
             <div class='top'>
                 <p></p>
                 <div class='top' style="margin-bottom: 20px;">
-
                     <div class="image-container">
                         <img src="../file/matilde.png" alt="matilde" class="normal-image">
                         <img src="../file/matildepix.png" alt="matilde on hover" class="hover-image">
                     </div>
-
-
                 </div>
             </div>
+
             <ul class='section active_section' id='section_1'>
                 <li>
                     <span id='section_title_1' class='section_title active_section_title'>
@@ -89,15 +87,16 @@
                     </span>
                 </li>
             </ul>
+
             <ul class='section' id='section_30' style="padding-left: 10px; padding-top: 10px; height: 60%; overflow-y: auto;">
+
                 <ul style="padding-bottom: 8px;">
-                    <li class='exhibit_title'><a href='phd.html'>phd research <small>[2025→]</small></a>
-                    </li>
+                    <li class='exhibit_title'><a href='phd.html'>phd research <small>[2025→]</small></a></li>
                 </ul>
+
                 <p style="font-weight: bold;">>>> code </p>
                 <ul>
-                    <li class='exhibit_title'><a href='ornythorhynchus.html'>📌 ornythorhynchus live somewhere <small>[2025]</small></a>
-                    </li>
+                    <li class='exhibit_title'><a href='ornythorhynchus.html'>📌 ornythorhynchus live somewhere <small>[2025]</small></a></li>
                 </ul>
                 <ul>
                     <li class='exhibit_title'><a href='lineaumida.html'>📌 lineaumida <small>[2025]</small></a></li>
@@ -124,12 +123,10 @@
                     <li class='exhibit_title'><a href='boom.html'>boom - a poem <small>[2024]</small></a></li>
                 </ul>
                 <ul>
-                    <li class='exhibit_title'><a href='skeptic.html'>skeptic reader (Domestic Data
-                            Streamers) <small>[2024]</small></a></li>
+                    <li class='exhibit_title'><a href='skeptic.html'>skeptic reader (Domestic Data Streamers) <small>[2024]</small></a></li>
                 </ul>
                 <ul>
-                    <li class='exhibit_title'><a href='tabtsb.html'>tabtsb - the mailing list <small>[2024]</small></a>
-                    </li>
+                    <li class='exhibit_title'><a href='tabtsb.html'>tabtsb - the mailing list <small>[2024]</small></a></li>
                 </ul>
                 <ul>
                     <li class='exhibit_title'><a href='time.html'>the order of time <small>[2023]</small></a></li>
@@ -142,48 +139,61 @@
                     <li class='exhibit_title'><a href='wc.html'>wc notebook <small>[2024]</small></a></li>
                 </ul>
                 <ul>
-                    <li class='exhibit_title'><a href='sciarpa.html'>a scarf for Maria Puig de la
-                            Bellacasa <small>[2023]</small></a></li>
+                    <li class='exhibit_title'><a href='sciarpa.html'>a scarf for Maria Puig de la Bellacasa <small>[2023]</small></a></li>
                 </ul>
 
-                </li>
             </ul>
 
             <div class='bot'></div>
-
-
         </div>
+
         <button class="button" role="button">destroy</button>
         <audio id="clickSound" src="../file/click.mp3" preload="auto"></audio>
-
     </div>
-
 
     <div id='exhibit'>
         <div class='container'>
 
-            <p style="font-weight: bold; font-size: 25px; width: 90%;">Lavarand.py</p>
-            <p style="font-style: oblique; font-size: 12px; width:90%">[python]</p>
-            <p style="width:90%">Lava Lamps can be used as a source of randomness, which can be used to establish a random number generator.
-                <br>
-                I used my Lava Lamp to generate 6 random numbers and then I used them to play SuperEnalotto (and I lost). </p>
+            <p style="font-weight: bold; font-size: 25px; width: 90%; line-height: 1.2; ">Psychophysiological States as Compositional Material: Biosensors
+and Artificial Intelligence in Musical Performance</p>
+            <p style="width:90%; font-style: oblique; margin-bottom: 16px;">
+                Conservatorio G. Verdi, Como &amp; <a href="https://www.mmt.it/">MMT Creative Lab</a>, Milano
+            </p>
 
-            <p style="width:90%; margin-top: 20px;"> The script captures video from a webcam and generates random numbers using image hashes. At specific time intervals it hashes the current video frame using the SHA-1 cryptographic hash function which means it converts the frame's pixel data into a byte array. The byte array is then passed to the hash function to produce a unique hexadecimal hash string. <br>
-                The hash is then converted to a numerical value by interpreting the hash as a large hexadecimal integer and taking the modulo operation (% 90) to constrain the result to a range of 0 to 89. Adding 1 ensures the final number falls between 1 and 90, making it suitable for SuperEnalotto. This process combines cryptographic randomness with real-world video data, ensuring unpredictable yet reproducible lottery numbers.</p>
-            
-                <p style="width:90%; margin-top: 20px;">random numbers generated: [27, 6, 42, 76, 23, 2] </p>
-                <iframe src="https://player.vimeo.com/video/1041682597?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="600" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="lavaterminal" style="margin-top: -40px; margin-bottom: -40px;"></iframe>                
-                <br>
-                <img src="../file/lava.jpg" alt="" style="width: 40%;">
-                
-                <p> <a href="https://github.com/matildee3/lava-superenalotto">sourcecode</a></p>
+            <p style="width:90%; margin-bottom: 16px;">
+                The research lies at the intersection of electronic music, live performance, and intelligent interactive systems. It arises from a reflection on the role of instruments in performance practice: designing or adopting a technological device does not only mean equipping oneself with an operational tool, but also assuming a specific mode of perception, action, and organization of the sound experience. In this sense, the instrument can be configured as an extension of the performer's body and, at the same time, as an agent capable of redefining its expressive possibilities.
+            </p>
+
+            <p style="width:90%; margin-bottom: 16px;">
+                Within this framework, the integration of biometric technologies into musical performance is not considered a simple problem of signal acquisition and processing, but rather an aesthetic, relational, and compositional issue. The critical point from which the project starts concerns the risk that the musician's psychophysiological states (such as stress, hyperconcentration, attention, or performance anxiety) are reduced to mere numerical inputs, producing a sonification of data rather than an authentic musical elaboration of embodied experience.
+            </p>
+
+            <p style="width:90%; margin-bottom: 16px;">
+                Starting from this issue, the research centers on two main questions: how can the performer's psychophysiological states become active expressive material and co-determine the sound composition in real time? And to what degree can a technological system be designed not as a control interface, but as a co-creative partner, capable of introducing deviations, variations, and forms of unpredictability that are musically significant?
+            </p>
+
+            <p style="width:90%; margin-bottom: 16px;">
+The system currently being designed combines biosensors (in particular EEG, ECG/HRV, and GSR) with affective computing models for real-time inference and classification of psychophysiological states, and with sound generation strategies based on MIDI/OSC protocols in live environments. Experimental performances with <a href="https://www.mmt.it/">MMT Creative Lab</a> serve simultaneously as artistic production and research occasions.            </p>
+
+            <p style="width:90%; margin-bottom: 40px;">
+                This is a research in progress. The system, the questions, and the outputs are still taking shape.
+            </p>
+
+            <p style="width:90%; margin-bottom: 8px;">Related:</p>
+
+            <p style="font-size: 12px; width:90%; margin-left: 20px; margin-bottom: 6px;">
+                <em>SMALL AI: modelli locali come pratica di liuteria digitale</em> — paper &amp; talk at 
+                <a href="https://www.conservatoriosanpietroamajella.it/">SPaMEC 2026</a>, 
+                Napoli Elettronica, Conservatorio San Pietro a Majella, Napoli, May 2026. 
+                (forthcoming publication)
+            </p>
+            <p style="font-size: 12px; width:90%; margin-left: 20px; margin-bottom: 40px;">
+                Code: <a href="https://github.com/matildee3/SPaMEC2026">github.com/matildee3/SPaMEC2026</a>
+            </p>
+
         </div>
     </div>
 
-
 </body>
 <script src="../js/destroy.js"></script>
-
-
-
 </html>
