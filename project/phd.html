@@ -58,6 +58,58 @@
         #index ul.section span.subsection_title a {
             font-size: 15px;
         }
+
+        .va-tooltip-trigger {
+            position: relative;
+            color: #c2185b;
+            text-decoration: underline dotted;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+            cursor: help;
+        }
+
+        .va-tooltip {
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            bottom: calc(100% + 10px);
+            width: 230px;
+            padding: 9px 11px;
+            border: 1px solid #c2185b;
+            background: #fff1f6;
+            color: #000;
+            font-size: 12px;
+            line-height: 1.35;
+            font-style: normal;
+            text-align: left;
+            box-sizing: border-box;
+            opacity: 0;
+            visibility: hidden;
+            transform: translate(-50%, 4px);
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+            pointer-events: none;
+        }
+
+        .va-tooltip::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            width: 9px;
+            height: 9px;
+            border-right: 1px solid #c2185b;
+            border-bottom: 1px solid #c2185b;
+            background: #fff1f6;
+            transform: translate(-50%, -5px) rotate(45deg);
+        }
+
+        .va-tooltip-trigger:hover .va-tooltip,
+        .va-tooltip-trigger:focus .va-tooltip,
+        .va-tooltip-trigger:focus-visible .va-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, 0);
+        }
     </style>
 
 </head>
@@ -172,7 +224,10 @@
                 <p style="flex: 1 1 60%; margin: 0;">
                     This work explores how real-time sound transformation can influence the affective experience in the
                     context of non-idiomatic musical improvisation. The research proposes using the valence–arousal
-                    space as a framework to guide the improvisational process, through the continuous transformation of
+                    <span class="va-tooltip-trigger" tabindex="0" aria-describedby="va-space-note">valence–arousal
+                        space<span class="va-tooltip" id="va-space-note" role="tooltip">A model developed by psychologist
+                            James Russell in 1980 that describes emotions through two dimensions: valence
+                            (pleasantness) and arousal (activation).</span></span> as a framework to guide the improvisational process, through the continuous transformation of
                     sound to a desired affective point. The system analyzes in real time the acoustic characteristics of
                     the sound produced by the performer, estimates its position within the affective space, and
                     calculates a transformation toward a target affective point. The target therefore does not prescribe
